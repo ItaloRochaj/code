@@ -11,14 +11,12 @@
     <p>Bem-vindo à página Principal!</p>
 <ul>
     <li>
-        <a href="/">Principal</a>
+        <a href="{{ route('site.index')}}">Principal</a>
     </li>
     <li>
-        <a href="/">sobre-nos Nos </a>
+        <a href="{{route('site.sobrenos')}}">sobre-nos Nos </a>
     </li>
-
-
-        <a href="/">Contato</a>
+        <a href="{{route('site.contato')}}">Contato</a>
 </ul>
 
 </body>
