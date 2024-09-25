@@ -20,15 +20,14 @@ Route::get('/fornecedores', function(){return 'Fornecedores';})->name('app.forne
 Route::get('/produtos', function(){return 'Produtos';})->name('app.produtos');
 });
 
-Route::get('rota1', function(){
-    echo 'Rota1';
-})->name('site.rota1');
 
-Route::get('rota2', function(){
-    return redirect()->route('site.rota1');
-})->name('site.rota2');
+//Parametro de rotas.
+Route::get('/teste/{p1}/{p2}', function (int $p1, int $p2) {
+    return "A soma de $p1 + $p2 é: " . ($p1 + $p2);
+})->name('teste');
 
 
+// tratamento de retorno de not fund.
 Route::fallback(function () {
     echo 'A rota acessada não existe. <a href="' . route('site.index') . '">Clique aqui</a>';
 });
