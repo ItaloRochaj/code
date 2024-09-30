@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>Super Gestão - Sobre Nós</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="{{asset('css/style_basic.css')}}">
-    </head>
+@extends('site.layouts.basic')
 
-    <body>
-        <div class="topo">
+@section('titulo', 'Sobre nos')
 
-            <div class="logo">
-                <img src="{{ asset('img/logo.png') }}">
-            </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="{{ route('site.index') }}">Principal</a></li>
-                    <li><a href="{{ route('site.sobrenos') }}">Sobre Nós</a></li>
-                    <li><a href="{{ route('site.contato') }}">Contato</a></li>
-                </ul>
-            </div>
-        </div>
+@section('conteudo')
 
         <div class="conteudo-pagina">
             <div class="titulo-pagina">
@@ -53,3 +35,4 @@
         </div>
     </body>
 </html>
+@endsection
